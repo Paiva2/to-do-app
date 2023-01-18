@@ -1,0 +1,272 @@
+* {
+  font-family: sans-serif;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(
+    to right top,
+    #1499b5,
+    #007da8,
+    #006197,
+    #004583,
+    #072969
+  );
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#container {
+  margin-top: 8%;
+  width: 520px;
+  height: 550px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 0.9%;
+  padding: 10px;
+  box-shadow: 9px 9px 13px -8px rgba(0, 0, 0, 0.67);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#new-tasks-div {
+  font-size: 20px;
+  overflow: hidden;
+  margin-left: 10px;
+}
+
+#todofield-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  height: 50px;
+  margin-top: 20px;
+}
+
+#todofield {
+  font-size: 20px;
+  height: 40px;
+  width: 370px;
+  border: none;
+  border-bottom: 2px solid rgb(0, 204, 255);
+  border-radius: 3px;
+  margin: 20px;
+  background-color: rgb(255, 255, 255, 0.9);
+  padding-left: 10px;
+  color: rgb(0, 0, 0);
+  outline: none;
+}
+
+#add-btn {
+  background-color: #386dcf;
+  border-style: none;
+  border-radius: 3px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 40px;
+  width: 50px;
+  height: 40px;
+  color: rgb(255, 255, 255);
+}
+
+#add-btn:hover {
+  background-color: #0e47b1;
+  transition: 0.5s all;
+}
+
+.deleteBtn {
+  align-self: center;
+  height: 55px;
+  width: 52px;
+  background-color: rgba(209, 24, 24, 0.8);
+  border-style: none;
+  border-radius: 3px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 35px;
+}
+
+.deleteBtn:hover {
+  background-color: rgba(255, 0, 0, 0.7);
+  transition: 0.5s all;
+}
+
+.new-task-styles {
+  align-items: center;
+  display: flex;
+  margin: 12px;
+  height: 55px;
+  overflow: hidden;
+  width: 460px;
+  border-radius: 3px;
+  border: 1px rgb(179, 171, 171);
+  background-color: rgba(255, 255, 255, 0.3);
+  color: rgb(255, 255, 255);
+}
+
+.text {
+  width: 380px;
+  padding: 5px;
+  word-break: break-all;
+}
+
+.editBtn {
+  height: 55px;
+  width: 50px;
+  border-style: none;
+  border-radius: 3px;
+  cursor: pointer;
+  color: white;
+  font-size: 25px;
+  background-color: transparent;
+}
+
+.editBtn:hover {
+  background-color: rgb(0, 0, 0, 0.2);
+  transition: 0.8s all;
+}
+
+#background-shadow {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  z-index: 50;
+  height: 100%;
+  width: 100%;
+  display: none;
+}
+
+#editContainer {
+  display: none;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  align-items: center;
+  margin-top: 15%;
+  height: 200px;
+  width: 600px;
+  background-color: #fff;
+  justify-content: center;
+  border-radius: 5px;
+  z-index: 100;
+}
+
+#edit-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+
+#edit-input input {
+  height: 40px;
+  width: 370px;
+  border: 2px solid rgb(0, 255, 170);
+  padding-left: 10px;
+  font-weight: 500;
+  color: rgb(0, 0, 0);
+  outline: none;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+#edit-btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  z-index: 100;
+}
+
+#confirm-edit {
+  background-color: rgba(60, 192, 93, 0.815);
+}
+
+#confirm-edit:hover {
+  background-color: rgba(12, 201, 60, 0.815);
+  transition: 0.9s all;
+}
+
+#cancel-edit {
+  background-color: rgba(216, 33, 33, 0.815);
+}
+
+#cancel-edit:hover {
+  background-color: rgba(255, 0, 0, 0.815);
+  transition: 0.9s all;
+}
+
+#cancel-edit,
+#confirm-edit {
+  height: 40px;
+  width: 90px;
+  border-style: none;
+  border-radius: 3px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.clear-all-btn {
+  margin: 15px;
+  height: 40px;
+  width: 90px;
+  background-color: rgba(214, 18, 18, 0.815);
+  border-style: none;
+  border-radius: 3px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 23px;
+  display: none;
+}
+
+.clear-all-btn:hover {
+  background-color: rgba(255, 0, 0, 0.815);
+  transition: 0.5s all;
+}
+
+@media (max-width: 450px) {
+  #container {
+    margin-top: 10%;
+    width: 350px;
+    padding: 10px;
+  }
+
+  #todofield-container {
+    width: 315px;
+  }
+
+  .new-task-styles {
+    height: 40px;
+    width: 300px;
+    margin: 5px;
+  }
+
+  .text {
+    font-size: 18px;
+    width: 210px;
+  }
+
+  .editBtn {
+    height: 40px;
+    width: 40px;
+    font-size: 20px;
+  }
+
+  #editContainer {
+    margin-top: 15%;
+    height: 200px;
+    width: 340px;
+  }
+
+  #edit-input {
+    width: 300px;
+  }
+}

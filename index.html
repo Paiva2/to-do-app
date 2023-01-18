@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do List</title>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    <link rel="icon" type="image/x-icon" href="/assets/icon/favicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <script src="/assets/js/script.js" defer></script>
+</head>
+
+<body>
+    <div id="background-shadow"></div>
+    <div id="container">
+        <form id="form">
+            <div id="todofield-container">
+                <input id="todofield" type="text" placeholder="Add your new task" autocomplete="off" maxlength="40">
+                <button type="submit" id="add-btn"><i class="bi bi-plus"></i></button>
+            </div>
+            <div id="new-tasks-div"></div>
+        </form>
+    </div>
+    <button class="clear-all-btn"><i class="bi bi-trash-fill"></i></button>
+    <div id="editContainer">
+        <form id="edit-form">
+            <div id="edit-input">
+                <input type="text" class="edit-input" placeholder="Edit task" maxlength="40">
+            </div>
+        </form>
+        <div>
+            <div id="edit-btns">
+                <button id="confirm-edit">OK</button>
+                <button id="cancel-edit">Cancel</button>
+            </div>
+        </div>
+
+</html>
